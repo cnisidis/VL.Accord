@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="BzVwbagzLVaNTaziaPUoiX" LanguageVersion="2022.5.0-0411-29671afbfa" Version="0.128">
+  <NugetDependency Id="Mz9UqGgkBCjPhaTKY2gstb" Location="VL.CoreLib" Version="2022.5.0-0411-g29671afbfa" />
+  <Patch Id="CMDowYIZ4sKPkc9nsQbd0i">
+    <Canvas Id="GasPj16HuSvOogb6Qegxx6" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="VywJf8GqPRlNh6tH3l88Ci">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="StUq1Bp24mwOQDPcBymirI">
+        <Canvas Id="CErOizLpMGiPE4T5Gk1vtY" CanvasType="Group">
+          <Node Bounds="282,305" Id="Azaj5JziAOrOneB8W3WmAj">
+            <p:NodeReference LastCategoryFullName="VL.Accord.Regression.MultipleLinearRegression" LastSymbolSource="VL.Accord.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Learn (Multivariate)" />
+            </p:NodeReference>
+            <Pin Id="PZYi3cis9BUOuTL3BWjirB" Name="X" Kind="InputPin" />
+            <Pin Id="R2m7CPhu1G9N5nkELsg0et" Name="Y" Kind="InputPin" />
+            <Pin Id="A237CG0RvjYPgJgDK1u5Kf" Name="Weights" Kind="InputPin" />
+            <Pin Id="OUJUxyxKlMHM95wVM5zwP7" Name="LearnMethod" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="282,352,130,19" Id="Ajn8JjfVLctQBNebExbWwv">
+            <p:NodeReference LastCategoryFullName="VL.Accord.Regression" LastSymbolSource="VL.Accord.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MultipleLinearRegression" />
+            </p:NodeReference>
+            <Pin Id="QO0IMJehLvGMJq6tzm6rDK" Name="LearnMethod" Kind="InputPin" />
+            <Pin Id="Sea03xjvaGVPVbNsj3LsfP" Name="UseIntercept" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="HAHjoWo4OnZPZt28ACVKpI" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="PVVI72pQ0m0QcVupXGupNz" Comment="" Bounds="223,169,96,74" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>0.25, 0</Item>
+              <Item>0, 0.22999999</Item>
+              <Item>0.13, 0.17</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="H9W1FiyHWStPIL8EnveWhf" Comment="Y" Bounds="360,166,57,72" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>0, 0</Item>
+              <Item>0, 0</Item>
+              <Item>0, 0</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="FpqMeIKTSi1MBYWt2ST6OU" Comment="Weights" Bounds="452,171,35,65" ShowValueBox="true" isIOBox="true" Value="1, 1, 1">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Float32" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="262,464,65,19" Id="TY9ZPoAgmrKMjWloHJ0lcV">
+            <p:NodeReference LastCategoryFullName="VL.Accord.Regression.MultipleLinearRegression.Learn (Multivariate)" LastSymbolSource="VL.Accord.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Predict" />
+            </p:NodeReference>
+            <Pin Id="UfoKWjSKufcP41TQC4vttL" Name="predict" Kind="InputPin" />
+            <Pin Id="NlfLKhAcvztNoReyXiQLhF" Name="Input (this)" Kind="InputPin" />
+            <Pin Id="O2HniVFIvpyNnqGlnHmmDt" Name="Input" Kind="InputPin" />
+            <Pin Id="ClloHfLU4B2L7OBz4ADzNs" Name="Output" Kind="InputPin" />
+            <Pin Id="DkY1e41VTNvQbT87hHz4nP" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="TZeYL9SwhxgOEASucwg6ZD" Comment="" Bounds="348,398,53,44" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>0</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="H8Nhw2w77GBQOiGoZ1tRdq" Comment="" Bounds="435,406,108,37" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>0</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="HLbC6pCKjjYLuB3K9CSH1q" Comment="predict" Bounds="204,420,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="RENlCkreOkcPWtZUeowDCH" Bounds="217,135,35,19" ShowValueBox="true" isIOBox="true" Value="WIP">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="LFU7Y1ZQUxqMcODI3SAzma" Bounds="223,98,412,-2" ShowValueBox="true" isIOBox="true" Value="http://accord-framework.net/docs/html/T_Accord_Statistics_Models_Regression_Linear_MultipleLinearRegression.htm">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="B2da96Pq9XaPavg8wf3RY2" Name="Create" />
+        <Patch Id="OFNhS5vv3VEOYT1RIyvH8H" Name="Update" />
+        <ProcessDefinition Id="GY3LESAulxJL3d6WdurePD">
+          <Fragment Id="K0EoB6H7d2sMQipK6KxFg8" Patch="B2da96Pq9XaPavg8wf3RY2" Enabled="true" />
+          <Fragment Id="EkKleDNQh9TLhingBNevGy" Patch="OFNhS5vv3VEOYT1RIyvH8H" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="ARavcjSXYzHNx0X0Llogvs" Ids="OUJUxyxKlMHM95wVM5zwP7,QO0IMJehLvGMJq6tzm6rDK" />
+        <Link Id="SvxL9GiDKtqPTiGDX5ho7z" Ids="PVVI72pQ0m0QcVupXGupNz,PZYi3cis9BUOuTL3BWjirB" />
+        <Link Id="GF3tbJPvrEFQEcnILAvoel" Ids="H9W1FiyHWStPIL8EnveWhf,R2m7CPhu1G9N5nkELsg0et" />
+        <Link Id="F0HsQijSkNqLUuxMjlkRNA" Ids="FpqMeIKTSi1MBYWt2ST6OU,A237CG0RvjYPgJgDK1u5Kf" />
+        <Link Id="AcHEmwfokrkMcTiwOyVMcr" Ids="HAHjoWo4OnZPZt28ACVKpI,NlfLKhAcvztNoReyXiQLhF" />
+        <Link Id="Ifg6z3Di67aPyST8wnYYGL" Ids="TZeYL9SwhxgOEASucwg6ZD,O2HniVFIvpyNnqGlnHmmDt" />
+        <Link Id="FVEJz41IAtVP4pAFaGHDZy" Ids="H8Nhw2w77GBQOiGoZ1tRdq,ClloHfLU4B2L7OBz4ADzNs" />
+        <Link Id="I2IgwAcyrmzN9I67vrLh6y" Ids="HLbC6pCKjjYLuB3K9CSH1q,UfoKWjSKufcP41TQC4vttL" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="Jx83VKyNb4WNBNocZDbnOZ" Location="VL.Accord" Version="0.0.0" />
+</Document>

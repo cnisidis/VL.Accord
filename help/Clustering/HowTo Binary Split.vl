@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="Dat8DC4BZk5PHFaSZCwERG" LanguageVersion="2022.5.0-0411-29671afbfa" Version="0.128">
+  <NugetDependency Id="S7CVKHO0GwpM6jKLX6oqOZ" Location="VL.CoreLib" Version="2022.5.0-0411-g29671afbfa" />
+  <Patch Id="FhZfaUoTyx5PX6YEu3JKw6">
+    <Canvas Id="OjYOA7BJW37OpMXpA7scGZ" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="RngV7SAZzumOzYxlaClXiv">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="Mw0QFFhQClYMrjrhxMKUsD">
+        <Canvas Id="PbxgFVAKMslOrfERFDVp1l" CanvasType="Group">
+          <Node Bounds="534,374,47,19" Id="PkMI6nD4EAqMZzGdggaDYK">
+            <p:NodeReference LastCategoryFullName="VL.Accord.Clustering.BinarySplit" LastSymbolSource="VL.Accord.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="BinarySplit" />
+              <Choice Kind="ProcessAppFlag" Name="Decide" />
+            </p:NodeReference>
+            <Pin Id="DdXh9O01LSgLSQ59nvaIdU" Name="Input (this)" Kind="InputPin" />
+            <Pin Id="MXxdrm4MWJmMJvkM4Mlfnp" Name="Input" Kind="InputPin" />
+            <Pin Id="PXF8HYsuFVKMyWuK9BgwYX" Name="Decide" Kind="InputPin" />
+            <Pin Id="BWNQnhG0zhXQUSkNV1BgEE" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="385,178,65,19" Id="F0uEz7LmzXOOOoMWyDGe2i">
+            <p:NodeReference LastCategoryFullName="VL.Accord.Clustering" LastSymbolSource="VL.Accord.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="BinarySplit" />
+            </p:NodeReference>
+            <Pin Id="OzwGJjKM9E0NsxbfVM6IkT" Name="K" Kind="InputPin" />
+            <Pin Id="NdXZ4f6O6bLLEXhNCHLwJq" Name="Learn" Kind="InputPin" />
+            <Pin Id="R67WH3PRZK2LjKVf5eRRBf" Name="X" Kind="InputPin" />
+            <Pin Id="OVmoeZnq75QPGvatlqWlyt" Name="Weights" Kind="InputPin" />
+            <Pin Id="BUxkkDMeKoCLAdkVAkPOTL" Name="BinarySplit" Kind="OutputPin" />
+            <Pin Id="L2FBsM2yq46M72Cci6bzCA" Name="Result" Kind="OutputPin" />
+            <Pin Id="VGXQvgPD1cNLE1pP9VND3v" Name="In Progress" Kind="OutputPin" />
+          </Node>
+          <Pad Id="LFZLQr78JNSPXfTdeMSn1e" Comment="In Progress" Bounds="448,234,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="VlMd6EmCfAAN370h8DLkll" Comment="Decide" Bounds="616,325,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <ControlPoint Id="LyBsUGiC5U3L4Vx9VeKlYL" Bounds="418,274" />
+          <ControlPoint Id="OCqf6gSPTy2MTHW6X2kiSm" Bounds="533,320" />
+          <Pad Id="ADSpdhQarsoNfDfizDheqh" Comment="Learn" Bounds="407,105,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="RUHdocvzVK3LIDJEkwFCRC" Comment="K" Bounds="385,63,35,15" ShowValueBox="true" isIOBox="true" Value="3">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="TjWniipHaXyOGVAPyA7OwZ" Bounds="550,-77,187,169" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference>
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference>
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">15</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+            <p:Value>
+              <Item>-5, -2, -1</Item>
+              <Item>-5, -5, -6</Item>
+              <Item>2, 1, 1</Item>
+              <Item>1, 1, 2</Item>
+              <Item>1, 2, 2</Item>
+              <Item>3, 1, 2</Item>
+              <Item>11, 5, 4</Item>
+              <Item>15, 5, 6</Item>
+              <Item>10, 5, 6</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="J6B5RduKY6oPueRR6kmbIw" Comment="" Bounds="535,446,37,21" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">23</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="MwhoOQN15LWOlENX49DAig" Comment="Weights" Bounds="761,-71,35,95" ShowValueBox="true" isIOBox="true" Value="1, 1, 1, 1, 1, 1, 1, 1, 1">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Float32" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">13</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="IkB5y1tAaC4NZeOgJ95uZT" Name="Create" />
+        <Patch Id="FyatLswyqrKMcnGPHtHYSr" Name="Update" />
+        <ProcessDefinition Id="D0gZleyn3WrOzSSO1r0VlU">
+          <Fragment Id="Pv08ZMbpH1qNwOkKOfb9lx" Patch="IkB5y1tAaC4NZeOgJ95uZT" Enabled="true" />
+          <Fragment Id="OVAlli3ql6ML6abugwwUPu" Patch="FyatLswyqrKMcnGPHtHYSr" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="Vs8zkQ62EPmPqq1JhRnF1Y" Ids="L2FBsM2yq46M72Cci6bzCA,LyBsUGiC5U3L4Vx9VeKlYL,OCqf6gSPTy2MTHW6X2kiSm,DdXh9O01LSgLSQ59nvaIdU" />
+        <Link Id="P5CQB9gt2h3O4ByJJT4SM9" Ids="VGXQvgPD1cNLE1pP9VND3v,LFZLQr78JNSPXfTdeMSn1e" />
+        <Link Id="RmG2YYyBDQ8LEdZ1EhCyq4" Ids="VlMd6EmCfAAN370h8DLkll,PXF8HYsuFVKMyWuK9BgwYX" />
+        <Link Id="BhZoi6Vf6LbPYSnxnvHlWL" Ids="ADSpdhQarsoNfDfizDheqh,NdXZ4f6O6bLLEXhNCHLwJq" />
+        <Link Id="DVeQkh37whMMsXrOmJpfGH" Ids="RUHdocvzVK3LIDJEkwFCRC,OzwGJjKM9E0NsxbfVM6IkT" />
+        <Link Id="CvDIa60Q6idNUHUaIeCWh8" Ids="TjWniipHaXyOGVAPyA7OwZ,R67WH3PRZK2LjKVf5eRRBf" />
+        <Link Id="JjAboBfMx4DQQu4PQLSHns" Ids="BWNQnhG0zhXQUSkNV1BgEE,J6B5RduKY6oPueRR6kmbIw" />
+        <Link Id="LxZE3O9yqmkLiY5PecSa0M" Ids="MwhoOQN15LWOlENX49DAig,OVmoeZnq75QPGvatlqWlyt" />
+        <Link Id="JOSt7FyEyoyN9QvYZCxlZP" Ids="TjWniipHaXyOGVAPyA7OwZ,MXxdrm4MWJmMJvkM4Mlfnp" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="Eg8yGfXaRLYM7fuZeIsh1H" Location="VL.Accord" Version="0.0.0" />
+</Document>

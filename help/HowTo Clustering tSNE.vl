@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="IoV7YkPyFwxN27kJS8PUk3" LanguageVersion="2022.5.0-0411-29671afbfa" Version="0.128">
+  <Patch Id="Elg0tpYDvAANdAVwHxd8b6">
+    <Canvas Id="I0aQjxzT5ZdMH0DUGODDh5" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="B0nIU2FNVgOMnN7XlgMRaY">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="DPxYueWnJZmPFkqojayqc6">
+        <Canvas Id="UWxh2wJJZ0ENMPkOD2Kkdh" CanvasType="Group">
+          <Node Bounds="389,522,85,19" Id="JjLPjRPiTxaMRtLb23MUbZ">
+            <p:NodeReference LastCategoryFullName="VL.Accord" LastSymbolSource="VL.Accord.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Clustering" />
+            </p:NodeReference>
+            <Pin Id="Gn1WC5t23UXPqi0OtsPluL" Name="NumberOfOutputs" Kind="InputPin" DefaultValue="1" />
+            <Pin Id="LEvxuuAxLiuPztiezmljr6" Name="Perplexity" Kind="InputPin" />
+            <Pin Id="NhB6teWWTHVPxNSJceuVXQ" Name="Transform" Kind="InputPin" />
+            <Pin Id="LrXAdP092XnMTr7VX6XSnS" Name="Observations" Kind="InputPin" />
+            <Pin Id="Au1QxRwq8jOQPZeJ6G5d7D" Name="Result" Kind="InputPin" />
+            <Pin Id="JMeKI91b5KfL7mIOcSShpf" Name="Result" Kind="OutputPin" />
+            <Pin Id="CPxFFPXm9E3LxlNnIZO3op" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="HmJhdREubelNdO8SgKDr1V" Bounds="451,219,187,169" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference>
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference>
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">15</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+            <p:Value>
+              <Item>-5, -2, -1</Item>
+              <Item>-5, -5, -6</Item>
+              <Item>2, 1, 1</Item>
+              <Item>1, 1, 2</Item>
+              <Item>1, 2, 2</Item>
+              <Item>3, 1, 2</Item>
+              <Item>11, 5, 4</Item>
+              <Item>15, 5, 6</Item>
+              <Item>10, 5, 6</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="EQfuGBnrBkMOG9xpq45UnT" Comment="" Bounds="391,612,72,84" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="IF9SIa3Y056O2FKAuBvJi4" Bounds="355,130,523,22" ShowValueBox="true" isIOBox="true" Value="http://accord-framework.net/docs/html/T_Accord_MachineLearning_Clustering_TSNE.htm">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="FjXoqw2iVI0PrU3h88BCLE" Comment="Transform" Bounds="326,420,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="M3quQdYW1BELxQ5Lbes3f1" Comment="" Bounds="654,221,154,168" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>0.58</Item>
+              <Item>0.13</Item>
+              <Item>1</Item>
+              <Item>1</Item>
+              <Item>1</Item>
+              <Item>1</Item>
+              <Item>1</Item>
+              <Item>1</Item>
+              <Item>1</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="M80GN2iROg4NToRop5dJMm" Bounds="361,163,414,21" ShowValueBox="true" isIOBox="true" Value="http://lvdmaaten.github.io/publications/papers/JMLR_2014.pdf">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="FTV1M574mFiPQcAT59mNy5" Comment="" Bounds="500,626,54,95" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="JPrpQcecd00PTmgueqqrj0" Comment="NumberOfOutputs" Bounds="165,426,35,15" ShowValueBox="true" isIOBox="true" Value="3">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+        </Canvas>
+        <Patch Id="V3CEz4dK5hrNwAPx0DOfK4" Name="Create" />
+        <Patch Id="UFoDSrTDt9ZOX21jplYQdl" Name="Update" />
+        <ProcessDefinition Id="CrqdzT3ILlSOzcSajpGZuo">
+          <Fragment Id="QV31yJnrMZMN8pwlqZO7Sh" Patch="V3CEz4dK5hrNwAPx0DOfK4" Enabled="true" />
+          <Fragment Id="UtoLHxHq1qCQCh8fCmRC8o" Patch="UFoDSrTDt9ZOX21jplYQdl" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="UTCHCJGCXTaLpC5CBf8mF1" Ids="JMeKI91b5KfL7mIOcSShpf,EQfuGBnrBkMOG9xpq45UnT" />
+        <Link Id="A2sefJ0Tu69MfvIr5PAqho" Ids="HmJhdREubelNdO8SgKDr1V,LrXAdP092XnMTr7VX6XSnS" />
+        <Link Id="H2Wji7QRJMiOREjGIYQ1zP" Ids="FjXoqw2iVI0PrU3h88BCLE,NhB6teWWTHVPxNSJceuVXQ" />
+        <Link Id="QJ36TLbpGaXPElzLqYw69h" Ids="M3quQdYW1BELxQ5Lbes3f1,Au1QxRwq8jOQPZeJ6G5d7D" />
+        <Link Id="CtTktGxtqSbMdHi2CEPKRZ" Ids="CPxFFPXm9E3LxlNnIZO3op,FTV1M574mFiPQcAT59mNy5" />
+        <Link Id="HuELr1Co6H0QXElQ4689YU" Ids="JPrpQcecd00PTmgueqqrj0,Gn1WC5t23UXPqi0OtsPluL" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="GPxkEpXikSdLq8e56o42Fa" Location="VL.CoreLib" Version="2022.5.0-0411-g29671afbfa" />
+  <NugetDependency Id="CA8799G57PEMKlcxBI21kv" Location="VL.Accord" Version="0.0.0.0" />
+</Document>

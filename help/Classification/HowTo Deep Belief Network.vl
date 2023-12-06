@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="DKSnvybdx0kK91U07YuCzM" LanguageVersion="2022.5.0-0411-29671afbfa" Version="0.128">
+  <Patch Id="Elg0tpYDvAANdAVwHxd8b6">
+    <Canvas Id="I0aQjxzT5ZdMH0DUGODDh5" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="B0nIU2FNVgOMnN7XlgMRaY">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="DPxYueWnJZmPFkqojayqc6">
+        <Canvas Id="UWxh2wJJZ0ENMPkOD2Kkdh" CanvasType="Group">
+          <Node Bounds="473,435" Id="BphsIJVequ2PRx80KKlgtl">
+            <p:NodeReference LastCategoryFullName="VL.Accord.DeepLearning" LastSymbolSource="VL.Accord.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="DeepBelief" />
+            </p:NodeReference>
+            <Pin Id="JnkL0gJHIeGPhtYaB4nsre" Name="Inputs Count" Kind="InputPin" />
+            <Pin Id="SARhmZcVQU9Mya2rwh2G79" Name="Hidden Neurons" Kind="InputPin" />
+            <Pin Id="KXyJX2GUXn7NYTXEOM10wO" Name="NewLayerNeurons" Kind="InputPin" />
+            <Pin Id="NMi5s3E9g9CL0vWtXsr0wG" Name="SelectedLayerIndex" Kind="InputPin" />
+            <Pin Id="EnCQkaCTe8HPi3yqdrBRml" Name="LearningRate" Kind="InputPin" />
+            <Pin Id="MMyrinP00AHM8ZcaUmsB9g" Name="Momentum" Kind="InputPin" />
+            <Pin Id="O0LzPRrv0luQdndRSDrrKE" Name="Decay" Kind="InputPin" />
+            <Pin Id="CL3bm9csRJYPqZhC9z21fY" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Node Bounds="473,503,84,26" Id="THAgtU0c3eCN3vycujLPJo">
+            <p:NodeReference LastCategoryFullName="VL.Accord.DeepLearning.DeepBelief" LastSymbolSource="VL.Accord.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="DeepBelief" />
+              <Choice Kind="OperationCallFlag" Name="StackNewLayer" />
+            </p:NodeReference>
+            <Pin Id="RKjd88WudUGQImz5oMSLuO" Name="Input" Kind="StateInputPin" />
+            <Pin Id="QCtTSWpSmF1P3yHyjM6m41" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="TbIVt5TA971OmLj9OcrQON" Name="Apply" Kind="InputPin" />
+          </Node>
+          <Pad Id="L4Ik2H6vlUbQBqIIxIoOzc" Comment="Apply" Bounds="583,464,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="576,303,165,26" Id="Te2ovOfKxP7QUReUXaEw36">
+            <p:NodeReference LastCategoryFullName="VL.Accord.DeepLearning.LearnModel" LastSymbolSource="VL.Accord.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="LearnModel" />
+              <Choice Kind="OperationCallFlag" Name="Create" />
+            </p:NodeReference>
+            <Pin Id="AV0AfqnxwEhLSQV1kNPuxw" Name="SelectedLayerIndex" Kind="InputPin" />
+            <Pin Id="Qx8Z2rJeqikQAWrdhaZQCJ" Name="ShouldLayerBeSupervised" Kind="InputPin" />
+            <Pin Id="PNHcMfyGbLbOShrApeuqzL" Name="ShouldLearnEntireNetwork" Kind="InputPin" />
+            <Pin Id="AwUSB1hKjmiM58SSXR4f3B" Name="LearningRate" Kind="InputPin" />
+            <Pin Id="PbZSfEE9PnFL2rk7lXIEKn" Name="Momentum" Kind="InputPin" />
+            <Pin Id="KPcHIYM0MjENxDfuEJhPmf" Name="WeightDecay" Kind="InputPin" />
+            <Pin Id="JhJlNEZTinWNYb9VosAuM2" Name="Epochs" Kind="InputPin" />
+            <Pin Id="Pa5a45yccj9PZgUEbOzt4o" Name="BatchSize" Kind="InputPin" />
+            <Pin Id="LMhUmVnbRbCM7iRXOVCp0S" Name="Sets" Kind="InputPin" />
+            <Pin Id="UbXo7mUqlkLLWDSn4gYOTs" Name="Output" Kind="StateOutputPin" />
+          </Node>
+        </Canvas>
+        <Patch Id="V3CEz4dK5hrNwAPx0DOfK4" Name="Create" />
+        <Patch Id="UFoDSrTDt9ZOX21jplYQdl" Name="Update" />
+        <ProcessDefinition Id="CrqdzT3ILlSOzcSajpGZuo">
+          <Fragment Id="QV31yJnrMZMN8pwlqZO7Sh" Patch="V3CEz4dK5hrNwAPx0DOfK4" Enabled="true" />
+          <Fragment Id="UtoLHxHq1qCQCh8fCmRC8o" Patch="UFoDSrTDt9ZOX21jplYQdl" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="MYYbVfjBdHZNl2go7bawOQ" Ids="L4Ik2H6vlUbQBqIIxIoOzc,TbIVt5TA971OmLj9OcrQON" />
+        <Link Id="NZtbOLdsHEmNUpRyvpWH6C" Ids="CL3bm9csRJYPqZhC9z21fY,RKjd88WudUGQImz5oMSLuO" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="GPxkEpXikSdLq8e56o42Fa" Location="VL.CoreLib" Version="2022.5.0-0411-g29671afbfa" />
+  <NugetDependency Id="CA8799G57PEMKlcxBI21kv" Location="VL.Accord" Version="0.0.0.0" />
+</Document>

@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="N8iJXSxllwmOsqRMlsMGhh" LanguageVersion="2022.5.0-0411-29671afbfa" Version="0.128">
+  <Patch Id="RrdQ2lyzWnWNBmuaqbfGtZ">
+    <Canvas Id="J0izGLsqjCzOMAttW0cYcn" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Osgu0ZzflGrNz1G4ij9zq3">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="MxoDgAwMNcyPxx1NHREizx">
+        <Canvas Id="GDdKTGmGsmuPseoXdLaeRC" CanvasType="Group">
+          <Pad Id="RzYJqoVjmayMfAeOEMeQ2J" Comment="Train" Bounds="309,761,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="U10dBzjSqfZN0xqokakqiG" Comment="X" Bounds="302,434,214,103" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference>
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference>
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>1.06, 0</Item>
+              <Item>2, 2</Item>
+              <Item>0.3, 0.1</Item>
+              <Item>-0.129999997094274, -0.959999978542328</Item>
+              <Item>1.04999997653067, 1.11999997496605</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="Aq0GaZoLKfQMwRlrA0Ldj4" Comment="Y" Bounds="609,428,48,106" ShowValueBox="true" isIOBox="true" Value="0, 1, 2, 3, 4">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Integer32" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="MTag8elcmxkPHjHg0KMmGd" Comment="Weights" Bounds="722,424,41,111" ShowValueBox="true" isIOBox="true" Value="1, 1, 1, 1, 1">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference>
+                  <Choice Kind="TypeFlag" Name="Float32" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="IlbtMsRI7fKMJrsfZPzgIe" Comment="Input" Bounds="745,807,35,49" ShowValueBox="true" isIOBox="true" Value="-0.2, 0.14">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Float32" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="CgPjI2InCNPNPn6xhg7HLq" Comment="Decide" Bounds="747,895,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="532,803,122,19" Id="UxQdMa3ybf9MLFerkaPSWj">
+            <p:NodeReference LastCategoryFullName="VL.Accord" LastSymbolSource="VL.Accord.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="DecisionTree" />
+            </p:NodeReference>
+            <Pin Id="HR3ty3VWOmXQIDhosIM4sp" Name="Train" Kind="InputPin" />
+            <Pin Id="KRgOrBSdtb0NcxrQoD8YeF" Name="X" Kind="InputPin" />
+            <Pin Id="MyH0zntCYmZOcpBv8Lpl4O" Name="Y" Kind="InputPin" />
+            <Pin Id="JQR17v9T303OZzOTIYUzMC" Name="Weights" Kind="InputPin" />
+            <Pin Id="BUGSZwUAQjRL0gHIf2CWeY" Name="DecisionTree" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="530,945,47,19" Id="SxBHDtOWixTMhqgQTjnjfu">
+            <p:NodeReference LastCategoryFullName="VL.Accord.DecisionTree" LastSymbolSource="VL.Accord.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="DecisionTree" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Decide" />
+            </p:NodeReference>
+            <Pin Id="GhHfSa8OF2PLBgDqHTSkb6" Name="DecisionTree" Kind="InputPin" />
+            <Pin Id="EHkjU1YNbs9L1CHmpYwFAH" Name="Input" Kind="InputPin" />
+            <Pin Id="LUfyuiLGDrPQX8dtoWqAX5" Name="Decide" Kind="InputPin" />
+            <Pin Id="I3Oynz6uCXhQWSTdbQItqO" Name="Has Changed" Kind="OutputPin" />
+            <Pin Id="JyTqNJcsNjVMKvUe0C4djr" Name="Answer" Kind="OutputPin" />
+          </Node>
+          <Pad Id="EDWFl9segT5QXaCnnq2iP7" Comment="Answer" Bounds="572,1035,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="JpXnCJMnpVtNLbkPyPPLRl" Bounds="292,394,125,19" ShowValueBox="true" isIOBox="true" Value="1. Set Observations">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="AcPuscnva7iMWUbRYsaunk" Bounds="590,390,86,19" ShowValueBox="true" isIOBox="true" Value="2. Set Labels">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="CXunbKJsibCO4W2PFBkCKK" Bounds="707,392,95,19" ShowValueBox="true" isIOBox="true" Value="3. Set Weights">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="MAbyg1dEnGtQT8l8t9KyUu" Bounds="287,728,97,19" ShowValueBox="true" isIOBox="true" Value="4. Train Model">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="DDt3NHXIScgPufRbNog1Xn" Bounds="726,775,79,19" ShowValueBox="true" isIOBox="true" Value="5. Set Input">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="P00vjxbpgBJL0V8ApJAoTu" Bounds="829,894,79,19" ShowValueBox="true" isIOBox="true" Value="6. Decide">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="DMu2XFHYBi5OWS8HJmyYZM" Name="Create" />
+        <Patch Id="IuZGSOvXUAAM9H8kmPjzI7" Name="Update" />
+        <ProcessDefinition Id="MXE2iNnR7OwMsT9KQuCWqN">
+          <Fragment Id="Fl5SlSuZOEDQFxaXbEsnky" Patch="DMu2XFHYBi5OWS8HJmyYZM" Enabled="true" />
+          <Fragment Id="M3fLqTbXGneQDgvTr9zVdI" Patch="IuZGSOvXUAAM9H8kmPjzI7" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="QwAvSMYtamUPtavrKcGDoO" Ids="U10dBzjSqfZN0xqokakqiG,KRgOrBSdtb0NcxrQoD8YeF" />
+        <Link Id="DMiJzzKqUwjM6znCwpGWf1" Ids="RzYJqoVjmayMfAeOEMeQ2J,HR3ty3VWOmXQIDhosIM4sp" />
+        <Link Id="TWlAactN2hOMZaGSSjDQTX" Ids="Aq0GaZoLKfQMwRlrA0Ldj4,MyH0zntCYmZOcpBv8Lpl4O" />
+        <Link Id="BubuvxSBACbPE3PWWtBHKc" Ids="MTag8elcmxkPHjHg0KMmGd,JQR17v9T303OZzOTIYUzMC" />
+        <Link Id="I7KUk7hox6EMrhCwUJAt2m" Ids="CgPjI2InCNPNPn6xhg7HLq,LUfyuiLGDrPQX8dtoWqAX5" />
+        <Link Id="TsNERpxH2rLPkOueJM0yVF" Ids="IlbtMsRI7fKMJrsfZPzgIe,EHkjU1YNbs9L1CHmpYwFAH" />
+        <Link Id="AWyp9utc3OcMsCEEIjQdPQ" Ids="JyTqNJcsNjVMKvUe0C4djr,EDWFl9segT5QXaCnnq2iP7" />
+        <Link Id="VsVXM5GbG2tMxUWN3cjNEs" Ids="BUGSZwUAQjRL0gHIf2CWeY,GhHfSa8OF2PLBgDqHTSkb6" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="NyHm5Ir4ODoL4qOtVRh4gj" Location="VL.CoreLib" Version="2022.5.0-0411-g29671afbfa" />
+  <NugetDependency Id="Hs45jcfR1BRMrhe2sIOZvA" Location="VL.Accord" Version="0.0.0.0" />
+</Document>

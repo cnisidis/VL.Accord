@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="Hd49z7NOKYTPVzHjPMWIJy" LanguageVersion="2023.5.3-0210-g711a1c31d4" Version="0.128">
+  <Patch Id="Elg0tpYDvAANdAVwHxd8b6">
+    <Canvas Id="I0aQjxzT5ZdMH0DUGODDh5" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="B0nIU2FNVgOMnN7XlgMRaY">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="DPxYueWnJZmPFkqojayqc6">
+        <Canvas Id="UWxh2wJJZ0ENMPkOD2Kkdh" CanvasType="Group">
+          <Node Bounds="82,668,245,19" Id="IcsYO23EDZjL58JE4zi2yB">
+            <p:NodeReference LastCategoryFullName="VL.Accord" LastDependency="VL.Accord.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="BoltzmannMachine" />
+            </p:NodeReference>
+            <Pin Id="NVpIvmzuSZ3NLEnQnIDUkc" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Jplbbeqiw7zNZu4iXq8UQI" Name="Alpha" Kind="InputPin" />
+            <Pin Id="TtqM16DaiSBMiVNIryzW60" Name="InputsCount" Kind="InputPin" DefaultValue="6" />
+            <Pin Id="TKDPYDOAdHdLgt33xl9i9Z" Name="Hidden Neurons" Kind="InputPin" DefaultValue="2" />
+            <Pin Id="FuiW0T1jAzPOZG9O7afYCQ" Name="Inputs" Kind="InputPin" />
+            <Pin Id="Md5V1em6J8MORWV7iW6J3H" Name="Momentum" Kind="InputPin" />
+            <Pin Id="CyV8knX8VRmMS5A8IRIFg7" Name="LearningRate" Kind="InputPin" />
+            <Pin Id="NA922Cds2oTPSW88OdNtK6" Name="Decay" Kind="InputPin" />
+            <Pin Id="DEhpROC0wMlPPiSxdlMOtE" Name="Epochs" Kind="InputPin" DefaultValue="5000" />
+            <Pin Id="LW1Zvx7I3otOJBgp1xhyrz" Name="RunEpoch" Kind="InputPin" />
+            <Pin Id="KIjfaNIZJANQaaS4QFpSK3" Name="Input" Kind="InputPin" />
+            <Pin Id="RkQxw8gs7C8N0GloQoUsFP" Name="ComputeInput" Kind="InputPin" />
+            <Pin Id="UeU4w1LbRoaMxFuzbLeQA7" Name="GenerateInput" Kind="InputPin" />
+            <Pin Id="D1IYqqHdx8zLZkTmUcvKpa" Name="Output" Kind="InputPin" />
+            <Pin Id="Vb6Y5jfD8GoOZh65T2LJZS" Name="In Progress" Kind="OutputPin" />
+            <Pin Id="AVnKQhy0HDQN4vO4Zj3U5C" Name="ComputedInput" Kind="OutputPin" />
+            <Pin Id="UQ1hNvSNbBANL3ZoQHPFfl" Name="ComputedOutput" Kind="OutputPin" />
+          </Node>
+          <Pad Id="LVe4a5T9ErkLa3e9kfIFb0" Comment="In Progress" Bounds="86,736,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="SbdEIJKefiCMvXQIYIjvZT" Comment="inputs" Bounds="130,127,279,143" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference>
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference>
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">14</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+            <p:Value>
+              <Item>1, 1, 1, 0, 0, 0</Item>
+              <Item>1, 0, 1, 0, 0, 0</Item>
+              <Item>1, 1, 1, 0, 0, 0</Item>
+              <Item>0, 0, 1, 1, 1, 0</Item>
+              <Item>0, 0, 1, 1, 0, 0</Item>
+              <Item>0, 0, 1, 1, 1, 0</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="RqkxlG9a7N8OWGqlVk90fJ" Comment="outputs" Bounds="597,129,279,143" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference>
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference>
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">14</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+            <p:Value>
+              <Item>1, 0</Item>
+              <Item>1, 0</Item>
+              <Item>1, 0</Item>
+              <Item>0, 1</Item>
+              <Item>0, 1</Item>
+              <Item>0, 1</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="Hll4dMhBzDBPvFsAIu4wiT" Comment="RunEpoch" Bounds="224,477,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="J3DUGYV9ccvNZfctNvbXiM" Comment="ComputeInput" Bounds="297,572,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Gb8cckao5GWMlgZFpyqXah" Comment="ComputedOutput" Bounds="363,739,115,111" ShowValueBox="true" isIOBox="true" Value="0">
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">19</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Ef8xZZ7nIxqPg1SEnTMRP8" Comment="ComputedInput" Bounds="205,748,60,75" ShowValueBox="true" isIOBox="true" Value="0" />
+          <Pad Id="EwDKVJni0g3L0e1fxwk7qu" Comment="GenerateInput" Bounds="304,619,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="JkKiROEv9MjNuRUMiVtsPl" Comment="Epochs" Bounds="270,545,35,15" ShowValueBox="true" isIOBox="true" Value="10000">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Hg0ukP90SwXN78pDCgOGxn" Bounds="57,76,634,22" ShowValueBox="true" isIOBox="true" Value="http://accord-framework.net/docs/html/T_Accord_Neuro_Networks_RestrictedBoltzmannMachine.htm">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="281,351,52,19" Id="KNLE9GIsxtFOHxZyz9wGZN">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="Spread" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="GetSlice" />
+            </p:NodeReference>
+            <Pin Id="Hh4NPH3Mpl8QTo5Zjuvxev" Name="Input" Kind="StateInputPin" />
+            <Pin Id="EtQyuPPUJ6uOrneBqQcRsP" Name="Default Value" Kind="InputPin" />
+            <Pin Id="EiKTqoAR61KOC2dJNLYfVD" Name="Index" Kind="InputPin" DefaultValue="2" />
+            <Pin Id="LgI2tp63aUEQF72dBR2wCb" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="J7N2StrRi83PpMco3B2T5q" Comment="LearningRate" Bounds="160,431,35,15" ShowValueBox="true" isIOBox="true" Value="0.1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="595,339,52,19" Id="NPtuq6aNvpoNxXAkPb2RNV">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="Spread" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="GetSlice" />
+            </p:NodeReference>
+            <Pin Id="F30d4GF23dHPQ3gq0HxrlI" Name="Input" Kind="StateInputPin" />
+            <Pin Id="HKwp2jkiCi1PJspjO3GWzQ" Name="Default Value" Kind="InputPin" />
+            <Pin Id="Rz3rGWo90wBN98I7XsRL9b" Name="Index" Kind="InputPin" />
+            <Pin Id="KbonDobGocmOSguIz9hbWb" Name="Result" Kind="OutputPin" />
+          </Node>
+        </Canvas>
+        <Patch Id="V3CEz4dK5hrNwAPx0DOfK4" Name="Create" />
+        <Patch Id="UFoDSrTDt9ZOX21jplYQdl" Name="Update" />
+        <ProcessDefinition Id="CrqdzT3ILlSOzcSajpGZuo">
+          <Fragment Id="QV31yJnrMZMN8pwlqZO7Sh" Patch="V3CEz4dK5hrNwAPx0DOfK4" Enabled="true" />
+          <Fragment Id="UtoLHxHq1qCQCh8fCmRC8o" Patch="UFoDSrTDt9ZOX21jplYQdl" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="F7CotljP8ECMviVfe5Ii0R" Ids="Vb6Y5jfD8GoOZh65T2LJZS,LVe4a5T9ErkLa3e9kfIFb0" />
+        <Link Id="UxriFBPUcm3OUy0UodMOvZ" Ids="Hll4dMhBzDBPvFsAIu4wiT,LW1Zvx7I3otOJBgp1xhyrz" />
+        <Link Id="E8x8WC266rpPPokj61fEbE" Ids="J3DUGYV9ccvNZfctNvbXiM,RkQxw8gs7C8N0GloQoUsFP" />
+        <Link Id="Kp3O4ALH6MHLWshnNjacjn" Ids="UQ1hNvSNbBANL3ZoQHPFfl,Gb8cckao5GWMlgZFpyqXah" />
+        <Link Id="ENkbM7WZbt9MyXDnEadtRp" Ids="AVnKQhy0HDQN4vO4Zj3U5C,Ef8xZZ7nIxqPg1SEnTMRP8" />
+        <Link Id="QgfHWrcHn3rNROEIMoGdqC" Ids="EwDKVJni0g3L0e1fxwk7qu,UeU4w1LbRoaMxFuzbLeQA7" />
+        <Link Id="CcodrwfcUXYLfcg3SQOpbC" Ids="JkKiROEv9MjNuRUMiVtsPl,DEhpROC0wMlPPiSxdlMOtE" />
+        <Link Id="JMnAM6zlRiGQPPGyVWVgf4" Ids="SbdEIJKefiCMvXQIYIjvZT,FuiW0T1jAzPOZG9O7afYCQ" />
+        <Link Id="Vn1Xmu0NYHgMBnIrdQI8M6" Ids="SbdEIJKefiCMvXQIYIjvZT,Hh4NPH3Mpl8QTo5Zjuvxev" />
+        <Link Id="TXsmqJVbKJdNRzLqJS4MfI" Ids="LgI2tp63aUEQF72dBR2wCb,KIjfaNIZJANQaaS4QFpSK3" />
+        <Link Id="ExpLA7c4aDNNBI85MJaa1K" Ids="J7N2StrRi83PpMco3B2T5q,CyV8knX8VRmMS5A8IRIFg7" />
+        <Link Id="RxGNxWbCuUZOBn4xN4Zio2" Ids="RqkxlG9a7N8OWGqlVk90fJ,F30d4GF23dHPQ3gq0HxrlI" />
+        <Link Id="FnL5s5T7XFDNVs5M8HoRZC" Ids="KbonDobGocmOSguIz9hbWb,D1IYqqHdx8zLZkTmUcvKpa" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="GPxkEpXikSdLq8e56o42Fa" Location="VL.CoreLib" Version="2023.5.3-0210-g711a1c31d4" />
+  <NugetDependency Id="CA8799G57PEMKlcxBI21kv" Location="VL.Accord" Version="0.0.0.0" />
+</Document>
